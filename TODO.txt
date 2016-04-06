@@ -1,0 +1,6 @@
+Draw a picture to show how the log stream be dispatch in java layer and native layer
+Provide jni sample, helloworld, threads, libraries
+Showcase change log level in program
+Provide aar package release
+Edit wiki add STDOUT usage demo
+
