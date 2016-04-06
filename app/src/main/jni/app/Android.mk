@@ -1,0 +1,19 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE		:= app
+LOCAL_SRC_FILES		:= app_jni.cpp
+
+LOCAL_CFLAGS		:= -Wall
+LOCAL_LDLIBS		:=
+LOCAL_SHARED_LIBRARIES	:=
+LOCAL_STATIC_LIBRARIES	:= liblogger
+
+ifeq ($(NDK_DEBUG),1)
+LOCAL_CFLAGS		+= -DLOG_OUTPUT_LOGCAT
+else
+LOCAL_CFLAGS		+= -DLOG_OUTPUT_LOGBACK
+endif
+
+include $(BUILD_SHARED_LIBRARY)
+
